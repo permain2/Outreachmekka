@@ -17,13 +17,79 @@
             color: #2d3748;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            padding: 0;
+        }
+
+        /* Top Header Navigation */
+        .top-header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1001;
+        }
+
+        .top-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .top-logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .top-logo a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .top-nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .top-nav-menu a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .top-nav-menu a:hover {
+            color: #667eea;
+        }
+
+        .top-cta-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        .top-cta-button:hover {
+            transform: translateY(-2px);
         }
 
         .container {
             max-width: 1200px;
-            margin: 0 auto;
+            margin: 70px auto 0;
             background: white;
-            min-height: 100vh;
+            min-height: calc(100vh - 70px);
             box-shadow: 0 0 50px rgba(0,0,0,0.1);
         }
 
@@ -56,7 +122,7 @@
             padding: 1rem 2rem;
             border-bottom: 1px solid #e2e8f0;
             position: sticky;
-            top: 120px;
+            top: 190px;
             z-index: 90;
         }
 
@@ -365,6 +431,9 @@
         }
 
         @media (max-width: 768px) {
+            .top-nav-menu {
+                display: none;
+            }
             .header h1 { font-size: 2rem; }
             .content { padding: 1rem; }
             .nav ul { flex-direction: column; }
@@ -381,6 +450,18 @@
     </style>
 </head>
 <body>
+    <!-- Top Header Navigation -->
+    <header class="top-header">
+        <nav class="top-nav-container">
+            <div class="top-logo"><a href="index.html">Outreach Mekka</a></div>
+            <ul class="top-nav-menu">
+                <li><a href="Complete_Outreach_Processes_Analysis.html">📋 Analysis</a></li>
+                <li><a href="VA_Influencer_Outreach_SOP.html">🎯 VA SOP</a></li>
+            </ul>
+            <a href="index.html" class="top-cta-button">Back to Home</a>
+        </nav>
+    </header>
+
     <div class="container">
         <header class="header">
             <h1>🎯 INFLUENCER OUTREACH SOP</h1>
